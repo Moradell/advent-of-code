@@ -12,7 +12,7 @@ def get_invalid_code_sum(data):
     for pair in data:
         [left_id, right_id] = pair.split("-")
 
-        for id in range(int(left_id), int(right_id)):
+        for id in range(int(left_id), int(right_id) + 1):
             stringify_id = str(id)
             if len(stringify_id) % 2 == 1:
                 continue
@@ -24,6 +24,3 @@ def get_invalid_code_sum(data):
                 sum += id
 
     return sum
-
-
-print(get_invalid_code_sum(data))
